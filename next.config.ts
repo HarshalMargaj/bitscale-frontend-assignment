@@ -11,6 +11,18 @@ const nextConfig: NextConfig = {
 				protocol: "https",
 				hostname: "img.youtube.com",
 			},
+			{
+				protocol: "https",
+				hostname: "cdn.simpleicons.org",
+			},
+			{
+				protocol: "https",
+				hostname: "www.google.com",
+			},
+			{
+				protocol: "https",
+				hostname: "*.google.com",
+			},
 		],
 	},
 };
