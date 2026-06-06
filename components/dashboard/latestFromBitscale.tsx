@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const LatestFromBitscale = () => {
 	return (
-		<div className="bg-surface-info  rounded-sm py-4 px-5 flex flex-col gap-4">
+		<div className="bg-surface-info  rounded-sm py-4 px-5 flex flex-col gap-4 h-41.5">
 			{/* Header */}
 			<div className="flex items-center justify-between">
 				<h2 className="text-sm font-medium text-primary-soft">

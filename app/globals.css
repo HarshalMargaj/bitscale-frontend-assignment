@@ -38,6 +38,13 @@
 	--color-border-layout: rgba(0, 0, 0, 0.08);
 	--color-border: #e5e7eb;
 	--color-border-subtle: #f3f4f6;
+	--color-border-card: #e7f3f8;
+
+	--color-surface-card-gradient: linear-gradient(
+		135deg,
+		#ffffff 0%,
+		#e7f3f8 100%
+	);
 
 	--radius-sm: 8px;
 	--radius-md: 12px;
