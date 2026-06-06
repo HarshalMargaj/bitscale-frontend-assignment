@@ -67,22 +67,51 @@ const DashboardTable = () => {
 											}
 										/>
 									</button>
-									<div className="space-x-8 flex items-center">
-										<div
-											className="w-5 h-5 flex items-center justify-center overflow-hidden shrink-0 border border-[#F1F1EF] rounded-sm"
-											style={{
-												boxShadow:
-													"2px 2px 4px 0px rgba(0,0,0,0.04)",
-											}}
-										>
-											<Image
-												src={row.icon}
-												alt={row.name}
-												width={10}
-												height={10}
-												className="object-contain"
-											/>
-										</div>
+									<div className="space-x-8  flex items-center">
+										{row.iconType === "multi" ? (
+											<div className="w-10">
+												<div className="flex items-center -space-x-2">
+													{row.icons?.map(
+														(src, i) => (
+															<div
+																key={i}
+																className="w-5 h-5 flex items-center justify-center bg-white rounded-sm border border-[#F1F1EF] shrink-0"
+																style={{
+																	boxShadow:
+																		"2px 2px 4px 0px rgba(0,0,0,0.04)",
+																}}
+															>
+																<Image
+																	src={src}
+																	alt=""
+																	width={10}
+																	height={10}
+																	className="object-contain"
+																/>
+															</div>
+														),
+													)}
+												</div>
+											</div>
+										) : (
+											<div className="w-10">
+												<div
+													className="w-5 h-5 flex items-center justify-center overflow-hidden shrink-0 border border-[#F1F1EF] rounded-sm"
+													style={{
+														boxShadow:
+															"2px 2px 4px 0px rgba(0,0,0,0.04)",
+													}}
+												>
+													<Image
+														src={row.icon}
+														alt={row.name}
+														width={10}
+														height={10}
+														className="object-contain"
+													/>
+												</div>
+											</div>
+										)}
 										<span className="text-xs font-normal text-text-primary">
 											{row.name}
 										</span>

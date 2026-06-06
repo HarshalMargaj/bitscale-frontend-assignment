@@ -4,8 +4,13 @@ export const gridData = [
 	{
 		id: 1,
 		name: "Workbook - Testing design Ideas for grid and workbook",
-		icon: getFavicon("notion.so"),
-		iconBg: "#F3F4F6",
+		iconType: "multi" as const,
+		icon: null,
+		icons: [
+			getFavicon("linkedin.com"),
+			getFavicon("hubspot.com"),
+			getFavicon("google.com"),
+		],
 		starred: false,
 		isGroup: true,
 		editedBy: {
@@ -18,7 +23,8 @@ export const gridData = [
 		id: 2,
 		name: "LinkedIn",
 		icon: getFavicon("linkedin.com"),
-		iconBg: "#EFF6FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -31,7 +37,8 @@ export const gridData = [
 		id: 3,
 		name: "Sales nav",
 		icon: getFavicon("linkedin.com"),
-		iconBg: "#F0F9FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -44,7 +51,8 @@ export const gridData = [
 		id: 4,
 		name: "find company",
 		icon: getFavicon("google.com"),
-		iconBg: "#F0FDF4",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
@@ -57,7 +65,8 @@ export const gridData = [
 		id: 5,
 		name: "import csv",
 		icon: getFavicon("notion.so"),
-		iconBg: "#FFF7ED",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
@@ -70,7 +79,8 @@ export const gridData = [
 		id: 6,
 		name: "Find people",
 		icon: getFavicon("linkedin.com"),
-		iconBg: "#F5F3FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
@@ -83,7 +93,8 @@ export const gridData = [
 		id: 7,
 		name: "Google maps",
 		icon: getFavicon("maps.google.com"),
-		iconBg: "#FEF2F2",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -96,7 +107,8 @@ export const gridData = [
 		id: 8,
 		name: "google search results",
 		icon: getFavicon("google.com"),
-		iconBg: "#F0F9FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -109,7 +121,8 @@ export const gridData = [
 		id: 9,
 		name: "factors",
 		icon: getFavicon("factors.ai"),
-		iconBg: "#FFF1F2",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -122,7 +135,8 @@ export const gridData = [
 		id: 10,
 		name: "Hubspot List - 10 (05 Aug 25)",
 		icon: getFavicon("hubspot.com"),
-		iconBg: "#FFF7ED",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
@@ -135,7 +149,8 @@ export const gridData = [
 		id: 11,
 		name: "Apollo contacts",
 		icon: getFavicon("apollo.io"),
-		iconBg: "#EFF6FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -148,7 +163,8 @@ export const gridData = [
 		id: 12,
 		name: "Twitter leads",
 		icon: getFavicon("x.com"),
-		iconBg: "#F9FAFB",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
@@ -161,7 +177,8 @@ export const gridData = [
 		id: 13,
 		name: "Clearbit enrichment",
 		icon: getFavicon("clearbit.com"),
-		iconBg: "#F0F9FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -174,7 +191,8 @@ export const gridData = [
 		id: 14,
 		name: "ZoomInfo export",
 		icon: getFavicon("zoominfo.com"),
-		iconBg: "#EFF6FF",
+		iconType: "single" as const,
+		icons: null,
 		starred: false,
 		isGroup: false,
 		editedBy: {
@@ -187,7 +205,8 @@ export const gridData = [
 		id: 15,
 		name: "Outreach sequences",
 		icon: getFavicon("outreach.io"),
-		iconBg: "#FEFCE8",
+		iconType: "single" as const,
+		icons: null,
 		starred: true,
 		isGroup: false,
 		editedBy: {
