@@ -1,4 +1,5 @@
 import DashboardHeader from "@/components/dashboard/dashboardHeader";
+import DashboardTabs from "@/components/dashboard/dashboardTabs";
 import LatestFromBitscale from "@/components/dashboard/latestFromBitscale";
 import ProductDemoCard from "@/components/dashboard/productDemoCard";
 import React from "react";
@@ -14,6 +15,9 @@ const page = () => {
 				<div className="flex-1">
 					<ProductDemoCard />
 				</div>
+			</div>
+			<div>
+				<DashboardTabs />
 			</div>
 		</div>
 	);
