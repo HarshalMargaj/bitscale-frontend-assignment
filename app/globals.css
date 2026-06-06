@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-	--color-primary: #1a56db;
+	--color-text-active: #1a56db;
 	--color-primary-soft: #347fa9;
 
 	--color-nav-active: #1a56db;
