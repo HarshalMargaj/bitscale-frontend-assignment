@@ -1,0 +1,73 @@
+// components/dashboard/DashboardHeader.tsx
+import { Building2, Users, Plus } from "lucide-react";
+
+interface ActionButtonProps {
+	icon: React.ReactNode;
+	label: string;
+	variant?: "outline" | "solid";
+	onClick?: () => void;
+}
+
+const ActionButton = ({
+	icon,
+	label,
+	variant = "outline",
+	onClick,
+}: ActionButtonProps) => {
+	if (variant === "solid") {
+		return (
+			<button
+				onClick={onClick}
+				className="flex items-center gap-2 py-2 px-3 bg-button-primary text-button-primary-foreground text-sm font-medium rounded-sm cursor-pointer"
+			>
+				{icon}
+				{label}
+			</button>
+		);
+	}
+
+	return (
+		<button
+			onClick={onClick}
+			className="flex items-center gap-2 py-2 px-3 border border-border text-text-secondary text-xs font-medium rounded-[6px] cursor-pointer hover:bg-surface-subtle"
+		>
+			{icon}
+			{label}
+		</button>
+	);
+};
+
+const DashboardHeader = () => {
+	return (
+		<div className="flex items-center justify-between">
+			<div>
+				<h1 className="text-[18px] font-semibold text-text-primary">
+					Welcome back, Tim!
+				</h1>
+				<p className="text-sm font-normal text-text-muted">
+					Here's your daily scoop on Bitscale!
+				</p>
+			</div>
+
+			<div className="flex items-center gap-3">
+				<ActionButton
+					icon={<Building2 size={14} className="text-text-credits" />}
+					label="Find Companies"
+					variant="outline"
+				/>
+				<ActionButton
+					icon={<Users size={14} className="text-text-active" />}
+					label="Find People"
+					variant="outline"
+				/>
+				<ActionButton
+					icon={<Plus size={16} />}
+					label="New Grid"
+					variant="solid"
+				/>
+			</div>
+		</div>
+	);
+};
+
+export default DashboardHeader;
