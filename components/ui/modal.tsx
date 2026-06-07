@@ -8,20 +8,11 @@ interface ModalProps {
 	onClose: () => void;
 	title: string;
 	children: React.ReactNode;
-	headerExtra: React.ReactNode;
 	width: number;
 	height: number;
 }
 
-const Modal = ({
-	isOpen,
-	onClose,
-	title,
-	children,
-	headerExtra,
-	width,
-	height,
-}: ModalProps) => {
+const Modal = ({ isOpen, onClose, children, width, height }: ModalProps) => {
 	useEffect(() => {
 		const handleEsc = (e: KeyboardEvent) => {
 			if (e.key === "Escape") onClose();
@@ -50,12 +41,6 @@ const Modal = ({
 				style={{ width: `${width}px`, height: `${height}px` }}
 				onClick={e => e.stopPropagation()}
 			>
-				<div className="flex items-center justify-between w-79.75">
-					<h2 className="text-[18px] font-extrabold text-text-primary">
-						{title}
-					</h2>
-					<div>{headerExtra}</div>
-				</div>
 				<button
 					onClick={onClose}
 					className="rounded-lg hover:bg-surface-subtle cursor-pointer text-icon-primary absolute right-2 top-2 bg-[#E5E7EB] h-4 w-4 flex items-center justify-center"

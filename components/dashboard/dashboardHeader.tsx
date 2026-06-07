@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Users, Plus, ChevronDown } from "lucide-react";
+import { Building2, Users, Plus } from "lucide-react";
 import { useState } from "react";
 import Modal from "../ui/modal";
 import FindPeopleModal from "../modals/findPeopleModal";
@@ -41,13 +41,6 @@ const ActionButton = ({
 	);
 };
 
-const SavedSearchButton = () => (
-	<div className="flex items-center gap-1 text-xs text-text-heading border border-border rounded-md px-2.5 py-0.5  cursor-pointer font-medium h-5.5 bg-surface-subtle">
-		<ChevronDown size={12} />
-		Saved Search
-	</div>
-);
-
 const DashboardHeader = () => {
 	const [isFindPeopleOpen, setIsFindPeopleOpen] = useState(false);
 
@@ -84,7 +77,6 @@ const DashboardHeader = () => {
 				isOpen={isFindPeopleOpen}
 				onClose={() => setIsFindPeopleOpen(false)}
 				title="Find People"
-				headerExtra={<SavedSearchButton />}
 				width={1025}
 				height={718}
 			>
