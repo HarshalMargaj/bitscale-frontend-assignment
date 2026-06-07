@@ -12,7 +12,7 @@ const Button = ({
 	className,
 }: ButtonProps) => {
 	const base =
-		"flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg cursor-pointer transition-colors";
+		"flex items-center gap-2 px-3 py-2 text-sm font-medium cursor-pointer transition-colors";
 
 	const variants = {
 		outline:

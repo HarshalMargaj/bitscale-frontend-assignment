@@ -4,42 +4,7 @@ import { Building2, Users, Plus } from "lucide-react";
 import { useState } from "react";
 import Modal from "../ui/modal";
 import FindPeopleModal from "../modals/findPeopleModal";
-
-interface ActionButtonProps {
-	icon: React.ReactNode;
-	label: string;
-	variant?: "outline" | "solid";
-	onClick?: () => void;
-}
-
-const ActionButton = ({
-	icon,
-	label,
-	variant = "outline",
-	onClick,
-}: ActionButtonProps) => {
-	if (variant === "solid") {
-		return (
-			<button
-				onClick={onClick}
-				className="flex items-center gap-2 py-2 px-3 bg-button-primary text-button-primary-foreground text-sm font-medium rounded-sm cursor-pointer"
-			>
-				{icon}
-				{label}
-			</button>
-		);
-	}
-
-	return (
-		<button
-			onClick={onClick}
-			className="flex items-center gap-2 py-2 px-3 border border-border text-text-secondary text-xs font-medium rounded-[6px] cursor-pointer hover:bg-surface-subtle"
-		>
-			{icon}
-			{label}
-		</button>
-	);
-};
+import Button from "../ui/button";
 
 const DashboardHeader = () => {
 	const [isFindPeopleOpen, setIsFindPeopleOpen] = useState(false);
@@ -56,22 +21,27 @@ const DashboardHeader = () => {
 			</div>
 
 			<div className="flex items-center gap-3">
-				<ActionButton
-					icon={<Building2 size={14} className="text-text-credits" />}
-					label="Find Companies"
+				<Button
 					variant="outline"
-				/>
-				<ActionButton
-					icon={<Users size={14} className="text-text-active" />}
-					label="Find People"
+					className="text-xs rounded-[6px] py-2"
+					onClick={() => {}}
+				>
+					<Building2 size={14} className="text-text-credits" />
+					Find Companies
+				</Button>
+
+				<Button
 					variant="outline"
+					className="text-xs rounded-[6px] py-2"
 					onClick={() => setIsFindPeopleOpen(true)}
-				/>
-				<ActionButton
-					icon={<Plus size={16} />}
-					label="New Grid"
-					variant="solid"
-				/>
+				>
+					<Users size={14} className="text-text-active" />
+					Find People
+				</Button>
+				<Button variant="solid" className="rounded-sm py-2">
+					<Plus size={16} />
+					New Grid
+				</Button>
 			</div>
 			<Modal
 				isOpen={isFindPeopleOpen}
