@@ -26,7 +26,7 @@ const DashboardHeader = () => {
 					className="text-xs rounded-[6px] py-2"
 					onClick={() => {}}
 				>
-					<Building2 size={14} className="text-text-credits" />
+					<Building2 size={16} className="text-text-credits" />
 					Find Companies
 				</Button>
 
@@ -35,7 +35,7 @@ const DashboardHeader = () => {
 					className="text-xs rounded-[6px] py-2"
 					onClick={() => setIsFindPeopleOpen(true)}
 				>
-					<Users size={14} className="text-text-active" />
+					<Users size={16} className="text-[#8F65AF]" />
 					Find People
 				</Button>
 				<Button variant="solid" className="rounded-sm py-2">
