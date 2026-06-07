@@ -85,6 +85,8 @@ const DashboardHeader = () => {
 				onClose={() => setIsFindPeopleOpen(false)}
 				title="Find People"
 				headerExtra={<SavedSearchButton />}
+				width={1025}
+				height={718}
 			>
 				<FindPeopleModal />
 			</Modal>

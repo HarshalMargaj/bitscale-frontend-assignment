@@ -9,6 +9,8 @@ interface ModalProps {
 	title: string;
 	children: React.ReactNode;
 	headerExtra: React.ReactNode;
+	width: number;
+	height: number;
 }
 
 const Modal = ({
@@ -17,6 +19,8 @@ const Modal = ({
 	title,
 	children,
 	headerExtra,
+	width,
+	height,
 }: ModalProps) => {
 	useEffect(() => {
 		const handleEsc = (e: KeyboardEvent) => {
@@ -42,7 +46,8 @@ const Modal = ({
 			onClick={onClose}
 		>
 			<div
-				className="relative bg-white rounded-lg shadow-xl w-225 max-h-[90vh] overflow-hidden p-8 space-y-6"
+				className="relative bg-white rounded-lg shadow-xl  overflow-hidden p-8 space-y-6"
+				style={{ width: `${width}px`, height: `${height}px` }}
 				onClick={e => e.stopPropagation()}
 			>
 				<div className="flex items-center justify-between w-79.75">
