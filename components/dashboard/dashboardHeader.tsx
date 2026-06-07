@@ -1,5 +1,9 @@
-// components/dashboard/DashboardHeader.tsx
-import { Building2, Users, Plus } from "lucide-react";
+"use client";
+
+import { Building2, Users, Plus, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import Modal from "../ui/modal";
+import FindPeopleModal from "../modals/findPeopleModal";
 
 interface ActionButtonProps {
 	icon: React.ReactNode;
@@ -37,7 +41,16 @@ const ActionButton = ({
 	);
 };
 
+const SavedSearchButton = () => (
+	<div className="flex items-center gap-1 text-xs text-text-heading border border-border rounded-md px-2.5 py-0.5  cursor-pointer font-medium h-5.5 bg-surface-subtle">
+		<ChevronDown size={12} />
+		Saved Search
+	</div>
+);
+
 const DashboardHeader = () => {
+	const [isFindPeopleOpen, setIsFindPeopleOpen] = useState(false);
+
 	return (
 		<div className="flex items-center justify-between">
 			<div>
@@ -59,6 +72,7 @@ const DashboardHeader = () => {
 					icon={<Users size={14} className="text-text-active" />}
 					label="Find People"
 					variant="outline"
+					onClick={() => setIsFindPeopleOpen(true)}
 				/>
 				<ActionButton
 					icon={<Plus size={16} />}
@@ -66,6 +80,14 @@ const DashboardHeader = () => {
 					variant="solid"
 				/>
 			</div>
+			<Modal
+				isOpen={isFindPeopleOpen}
+				onClose={() => setIsFindPeopleOpen(false)}
+				title="Find People"
+				headerExtra={<SavedSearchButton />}
+			>
+				<FindPeopleModal />
+			</Modal>
 		</div>
 	);
 };
