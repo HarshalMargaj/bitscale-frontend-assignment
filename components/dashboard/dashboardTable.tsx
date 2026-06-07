@@ -21,7 +21,10 @@ const DashboardTable = ({ tableData }: tableDataProps) => {
 	};
 
 	return (
-		<div className="w-full max-h-110 overflow-y-auto scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent">
+		<div
+			className="w-full overflow-y-auto scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+			style={{ maxHeight: "calc(100vh - 420px)" }}
+		>
 			<table className="w-full border-collapse">
 				<thead>
 					<tr className="border-b border-border">
