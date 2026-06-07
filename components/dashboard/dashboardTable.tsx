@@ -1,13 +1,17 @@
 "use client";
 
-import { gridData } from "@/constants/tableData";
+import { TableRow } from "@/types/tableData";
 import { ArrowUp, ChevronDown, MoreHorizontal, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-const DashboardTable = () => {
+interface tableDataProps {
+	tableData: TableRow[];
+}
+
+const DashboardTable = ({ tableData }: tableDataProps) => {
 	const [starred, setStarred] = useState<number[]>(
-		gridData.filter(r => r.starred).map(r => r.id),
+		tableData.filter(r => r.starred).map(r => r.id),
 	);
 
 	const toggleStar = (id: number) => {
@@ -39,7 +43,7 @@ const DashboardTable = () => {
 				</thead>
 
 				<tbody>
-					{gridData.map(row => (
+					{tableData.map(row => (
 						<tr
 							key={row.id}
 							className="border-b border-surface-subtle hover:bg-surface-subtle transition-colors group"
@@ -95,21 +99,24 @@ const DashboardTable = () => {
 											</div>
 										) : (
 											<div className="w-10">
-												<div
-													className="w-5 h-5 flex items-center justify-center overflow-hidden shrink-0 border border-[#F1F1EF] rounded-sm"
-													style={{
-														boxShadow:
-															"2px 2px 4px 0px rgba(0,0,0,0.04)",
-													}}
-												>
-													<Image
-														src={row.icon}
-														alt={row.name}
-														width={10}
-														height={10}
-														className="object-contain"
-													/>
-												</div>
+												{row.iconType === "single" &&
+													row.icon && (
+														<div
+															className="w-5 h-5 flex items-center justify-center overflow-hidden shrink-0 border border-[#F1F1EF] rounded-sm"
+															style={{
+																boxShadow:
+																	"2px 2px 4px 0px rgba(0,0,0,0.04)",
+															}}
+														>
+															<Image
+																src={row.icon}
+																alt={row.name}
+																width={10}
+																height={10}
+																className="object-contain"
+															/>
+														</div>
+													)}
 											</div>
 										)}
 										<span className="text-xs font-normal text-text-primary">

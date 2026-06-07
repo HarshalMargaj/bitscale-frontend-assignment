@@ -1,6 +1,6 @@
 import { getFavicon } from "@/lib/getFavicon";
 
-export const gridData = [
+export const tableData = [
 	{
 		id: 1,
 		name: "Workbook - Testing design Ideas for grid and workbook",

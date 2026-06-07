@@ -3,12 +3,17 @@
 import { Search, List } from "lucide-react";
 import { useState } from "react";
 import DashboardTable from "./dashboardTable";
+import { tableData } from "@/constants/tableData";
 
 const tabs = ["My Grids", "Starred"];
 
 const DashboardTabs = () => {
 	const [activeTab, setActiveTab] = useState("My Grids");
-	const [search, setSearch] = useState("");
+	const [searchQuery, setSearchQuery] = useState("");
+
+	const filterData = tableData.filter(d =>
+		d.name.toLowerCase().includes(searchQuery.toLowerCase()),
+	);
 
 	return (
 		<div className="space-y-6 px-5">
@@ -39,8 +44,8 @@ const DashboardTabs = () => {
 						<input
 							type="text"
 							placeholder="Search grids and workbooks..."
-							value={search}
-							onChange={e => setSearch(e.target.value)}
+							value={searchQuery}
+							onChange={e => setSearchQuery(e.target.value)}
 							className="bg-transparent text-xs text-text-secondary placeholder:text-text-muted placeholder:text-xs outline-none w-full"
 						/>
 					</div>
@@ -49,7 +54,9 @@ const DashboardTabs = () => {
 					</button>
 				</div>
 			</div>
-			{activeTab === "My Grids" && <DashboardTable />}
+			{activeTab === "My Grids" && (
+				<DashboardTable tableData={filterData} />
+			)}
 		</div>
 	);
 };
