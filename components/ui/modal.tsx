@@ -48,7 +48,7 @@ const Modal = ({ isOpen, onClose, children, width, height }: ModalProps) => {
 					<X size={12} />
 				</button>
 
-				<div className="overflow-y-auto h-full flex-1">{children}</div>
+				<div className="h-full flex-1">{children}</div>
 			</div>
 		</div>
 	);

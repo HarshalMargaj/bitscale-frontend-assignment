@@ -7,7 +7,7 @@ import RightPanel from "./rightPanel";
 
 const findPeopleModal = () => {
 	return (
-		<div className="flex h-full">
+		<div className="flex h-full gap-5 overflow-hidden">
 			<div className="flex flex-col space-y-6">
 				<div className="flex items-center justify-between w-79.75">
 					<h2 className="text-[18px] font-extrabold text-text-primary">
@@ -51,7 +51,7 @@ const findPeopleModal = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex-1">
+			<div className="flex-1 min-w-0 ">
 				<RightPanel />
 			</div>
 		</div>

@@ -2,7 +2,7 @@ import { Lock, Search } from "lucide-react";
 
 const FindPeopleResultsHeader = () => {
 	return (
-		<div className=" px-4 w-full space-y-1">
+		<div className=" px-2 w-full space-y-1">
 			<div className="flex justify-end">
 				<div className="flex items-center gap-1.5 bg-[#FBECDD] px-3 py-1.5 rounded-[16px] h-5.5">
 					<Search size={12} className="text-[#D9730E]" />
