@@ -4,9 +4,6 @@
 	--color-text-active: #1a56db;
 	--color-primary-soft: #347fa9;
 
-	--color-nav-active: #1a56db;
-	--color-nav-active-bg: #f3f4f6;
-
 	--color-text-primary: #1a202c;
 	--color-text-secondary: #1f2a37;
 	--color-text-heading: #111928;
@@ -45,9 +42,4 @@
 		#ffffff 0%,
 		#e7f3f8 100%
 	);
-
-	--radius-sm: 8px;
-	--radius-md: 12px;
-	--radius-lg: 16px;
-	--radius-xl: 20px;
 }
