@@ -4,12 +4,10 @@ import Image from "next/image";
 const LatestFromBitscale = () => {
 	return (
 		<div className="bg-surface-info  rounded-sm py-4 px-5 flex flex-col gap-4 h-41.5">
-			{/* Header */}
 			<div className="flex items-center justify-between">
 				<h2 className="text-sm font-medium text-primary-soft">
 					Latest from Bitscale
 				</h2>
-				{/* Dots indicator */}
 				<div className="flex items-center gap-1">
 					<div className="w-6 h-1.5 bg-primary-soft rounded-full" />
 					<div className="w-1.5 h-1.5 bg-[#8DBAD0] rounded-full" />
@@ -18,12 +16,10 @@ const LatestFromBitscale = () => {
 				</div>
 			</div>
 
-			{/* Content */}
 			<div className="flex gap-3">
-				{/* Thumbnail */}
 				<div className="relative w-36 h-24 rounded-[10px] overflow-hidden shrink-0 bg-gray-200">
 					<Image
-						src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+						src="https://img.youtube.com/vi/NTfPtYJORck/hqdefault.jpg"
 						alt="video thumbnail"
 						fill
 						className="object-cover"
@@ -38,7 +34,6 @@ const LatestFromBitscale = () => {
 					</div>
 				</div>
 
-				{/* Text */}
 				<div className="flex flex-col gap-1">
 					<h3 className="text-[13px] font-medium text-text-secondary">
 						How to Integrate 2 Way HubSpot
