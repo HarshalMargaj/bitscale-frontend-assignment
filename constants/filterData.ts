@@ -1,0 +1,68 @@
+import {
+	UserSearch,
+	Briefcase,
+	Globe,
+	MapPin,
+	MapPinned,
+	Users,
+	BarChart2,
+} from "lucide-react";
+
+export const filterData = [
+	{
+		id: 1,
+		title: "People Keyword",
+		icon: UserSearch,
+		placeholder: "Enter single keyword here...",
+		defaultOpen: true,
+		showChevron: true,
+	},
+	{
+		id: 2,
+		title: "Job Title",
+		icon: Briefcase,
+		placeholder: "E.g: Manager, Software Engineer",
+		defaultOpen: false,
+		showChevron: true,
+	},
+	{
+		id: 3,
+		title: "Company Website",
+		icon: Globe,
+		placeholder: "Eg: Google.com, LinkedIn.com",
+		defaultOpen: false,
+		showChevron: true,
+	},
+	{
+		id: 4,
+		title: "Person Location",
+		icon: MapPinned,
+		placeholder: "Eg: London, Great New York City",
+		defaultOpen: false,
+		showChevron: true,
+	},
+	{
+		id: 5,
+		title: "Company Location",
+		icon: MapPin,
+		placeholder: "E.g: United States, UAE",
+		defaultOpen: false,
+		showChevron: true,
+	},
+	{
+		id: 6,
+		title: "Company Headcount",
+		icon: Users,
+		placeholder: "E.g: 11-50 , 10000+",
+		defaultOpen: false,
+		showChevron: true,
+	},
+	{
+		id: 7,
+		title: "Management Level",
+		icon: BarChart2,
+		placeholder: "E.g: Owner, Founder",
+		defaultOpen: false,
+		showChevron: true,
+	},
+];

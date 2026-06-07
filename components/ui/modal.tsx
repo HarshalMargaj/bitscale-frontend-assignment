@@ -42,10 +42,10 @@ const Modal = ({
 			onClick={onClose}
 		>
 			<div
-				className="relative bg-white rounded-lg shadow-xl w-225 max-h-[90vh] overflow-hidden p-8"
+				className="relative bg-white rounded-lg shadow-xl w-225 max-h-[90vh] overflow-hidden p-8 space-y-6"
 				onClick={e => e.stopPropagation()}
 			>
-				<div className="flex items-center justify-between w-79.75 py-2 ">
+				<div className="flex items-center justify-between w-79.75">
 					<h2 className="text-[18px] font-extrabold text-text-primary">
 						{title}
 					</h2>
