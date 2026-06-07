@@ -16,7 +16,7 @@ const DashboardHeader = () => {
 					Welcome back, Tim!
 				</h1>
 				<p className="text-sm font-normal text-text-muted">
-					Here's your daily scoop on Bitscale!
+					Here&apos;s your daily scoop on Bitscale!
 				</p>
 			</div>
 
