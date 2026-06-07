@@ -6,7 +6,7 @@ import { Eye, FileSearchCorner } from "lucide-react";
 
 const findPeopleModal = () => {
 	return (
-		<div className="space-y-6">
+		<div className="space-y-6 flex flex-col justify-between h-full">
 			<div className="w-79.75">
 				{filterData.map(filter => (
 					<FilterAccordion

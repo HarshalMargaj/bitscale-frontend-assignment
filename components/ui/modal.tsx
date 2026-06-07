@@ -46,7 +46,7 @@ const Modal = ({
 			onClick={onClose}
 		>
 			<div
-				className="relative bg-white rounded-lg shadow-xl  overflow-hidden p-8 space-y-6"
+				className="relative bg-white rounded-lg shadow-xl  overflow-hidden p-8 space-y-6 flex flex-col"
 				style={{ width: `${width}px`, height: `${height}px` }}
 				onClick={e => e.stopPropagation()}
 			>
@@ -63,9 +63,7 @@ const Modal = ({
 					<X size={12} />
 				</button>
 
-				<div className="overflow-y-auto max-h-[calc(90vh-64px)]">
-					{children}
-				</div>
+				<div className="overflow-y-auto h-full flex-1">{children}</div>
 			</div>
 		</div>
 	);
